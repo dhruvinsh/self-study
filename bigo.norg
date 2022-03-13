@@ -1,0 +1,184 @@
+@document.meta
+  title: Big O
+  description: Explaination how Big O being used
+  author: Dhruvin Shah
+  categories: docs
+  created: 2022-03-11
+@end
+
+* BIG O
+  What is O stands for?
+  The letter O was chosen by Bachmann to stand for Ordnung, meaning the order of approximation
+ ** Rules
+    Reference: [Big O Notationi - HackerRank]{https://www.youtube.com/watch?v=v4cd1O4zkGw}
+  *** *Different steps gets added*
+      Example:
+      @code python
+      def foo():  # Total runtime O(a+b)
+        bar();  # O(a)
+        baz();  # O(b)
+      @end
+  *** *Drop constants (we just need overview of runtime)*
+      Example: 1
+      @code python
+      def min_max(array):  # Total runtime O(2N) => drop constants hence O(N)
+        min = max = None
+        for i in array:  # runtime O(N)
+          min = min([i, min])
+        for i in array:  # runtime O(N)
+          max = max([i, max])
+        return min, max
+      @end
+
+      Example: 2
+      @code python
+      def min_max(array):  # Total runtime O(N)
+        min = max = None
+        for i in array:
+          min = min([i, min])
+          max = max([i, max])
+        return min, max
+      @end
+  *** *Different inputs --> different variables*
+      Example:
+      @code python
+      # here two nested loop, and we might think that
+      # runtime is O(N^2^) but what does N suggest here?
+      # here actual runtime is O(a * b)
+      def intersection_size(array_a, array_b):
+        c = 0
+        for a in array_a:
+          for b in array_b:
+            if a == b:
+              c += 1
+        return c
+      @end
+  *** *Drop non-dominante terms*
+      Example:
+      @code python
+      # here total runtime we can calcuate as O(N+N^2^)
+      # Which is O(N^2^) <= O(N+N^2^) <= O(N^2^ + O^2^)
+      # based on above we can drop the non-dominat here
+      # so total runtime becomes O(N^2^)
+      def foo(array):
+        max = None
+        for i in array:  # runtime is O(N)
+          max = max([i, max])
+        print(max)
+
+        for a in array: # runtime is O(N^2^) Hint: same array unlike above
+          for b in array:
+            print(a,b)
+      @end
+
+
+* LeetCode Explaination
+ ** Describe
+    less time and space that is better.
+    Time measurement:
+      start-stop for code execution not perfect, what if faster computer?
+      correct way is to count number of operation like assignment, arithmetic operatoin"
+
+    @table
+    *Name* | *Big O*
+    -
+    Constant | O(c)
+    Logarithmic | O(log(n))
+    Linear | O(n)
+    Log Linear | O(nlog(n))
+    Quadratic | O(n^2)
+    Cubic | O(n^3)
+    Exponential | O(2^n)
+    @end
+
+    eg:
+  *** Good Example
+      @code python
+      nums = [1, 2, 3, 4]
+      n = len(nums)
+      print("sum of array: ", n*(n+1)/2)
+      @end
+
+      Here 1 assignment, 1 addition, 1 multiplication, 1 devision
+      runtime (time) complexity is O(1)
+
+      {@ BigO-Describe-Example-1.jpg}
+
+  *** Bad Example
+      @code python
+      nums = [1, 2, 3, 4]
+      n = len(nums)
+      sum = 0
+
+      for i in range(0, n):
+        sum+=nums[i]
+      print("Sum of array: ", sum)
+      @end
+
+      Here n number of addition, n assignment
+      Time complexity is 5N + 3
+
+      {@ BigO-Describe-Example-2.jpg}
+
+
+ ** Simplify
+    - just syats that ignore smaller terms: eg O(5N+3) is actually O(N)
+    - arithmetic operations, assignments are constants
+    - direct array element access (by index) is a constant
+
+
+ ** Define time complexity and space complexity
+    Time complexity concern with number of operation whereas space complexity concern with memory usage
+
+    - based on input variables how much runtime increase was all the talk about time complexity
+    - memory consumption during algorithms execution comes under space complexity
+      -- space only taken by algorithm, not by input
+
+  *** Space complexity of popular data structures
+      @table
+      *Name* | *Big O*
+      -
+      Hash tables(dict) | O(N)
+      Stacks | O(N)
+      Queues | O(N)
+      Strings | O(N)
+      Arrays | O(N)
+      2d Arrays | O(N*M)
+      @end
+
+
+ ** Find time/space complexity of algorithms
+    @code python
+    def get_arr_upto(n):
+      arr = []
+      for i in range(n):
+        arr.append(i)
+      return arr
+    @end
+
+    ~ what is the space complexity?
+      O(N) --> array increase by the append and limited to size of n
+    ~ what is the time complexity?
+      O(N) --> loop over the n data
+
+
+ ** Describe logarithms
+    - what is log?
+      log,2,(16) = 4            ==>     2^4^ = 16
+      log,2,(value) = exponent  ==>     2^exponent^ = value
+
+      usually we ignore base of 2. so log = log,2,
+
+    - what do they represents?
+      The number of times you can divide a number by the log's base, before you get a value that's less than or equal to 1.
+
+    - Example of algorithms with complexities that involv logs?
+      ~  Binary search ( log(N) ) (better then O(N) :D )
+      ~  Merge sort ( N*log(N) )
+
+
+
+
+* Reference
+  Cheatsheet-pdf: {@ big-o-cheatsheet.pdf}
+  Cheatsheet-png: {@ big-o-cheatsheet.png}
