@@ -38,9 +38,7 @@ def binary_search(array: list, target: int) -> int:
     left = 0
     right = len(array) - 1
 
-    while True:
-        if left > right:
-            return -1
+    while left <= right:
 
         mid = (left + right) // 2
 
@@ -50,6 +48,8 @@ def binary_search(array: list, target: int) -> int:
             right = mid
         elif array[mid] < target:
             left = mid + 1
+
+    return -1
 
 if __name__ == "__main__":
     array = list(range(11))
