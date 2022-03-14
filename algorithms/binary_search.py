@@ -13,18 +13,19 @@ element is not present then as a result return -1. Do not use list membership
 operator here
 """
 
+
 def binary_search(array: list, target: int) -> int:
     """
     implements binary search algorithm
     steps:
     for a sorted array
-    - initialize 2 pointer. called left and right 
+    - initialize 2 pointer. called left and right
     - left pointer stay at the beginning of the array (index 0) and right pointer
       will stay at end of an array (index n)
     - find the index at the middle of the 2 pointer. (0 + n)/2
     - if middle index's element is bigger than what we need, move right pointer index
       to that position.
-    - if middle element is smaller than what we need, move left pointer to 
+    - if middle element is smaller than what we need, move left pointer to
       middle index + 1 position.
 
 
@@ -44,21 +45,22 @@ def binary_search(array: list, target: int) -> int:
 
         if array[mid] == target:
             return mid
-        elif array[mid] > target:
+
+        if array[mid] > target:
             right = mid
         elif array[mid] < target:
             left = mid + 1
 
     return -1
 
-if __name__ == "__main__":
-    array = list(range(11))
-    target = 5
 
-    result = binary_search(array, target)
+if __name__ == "__main__":
+    ARRAY = list(range(11))
+    TARGET = 5
+
+    result = binary_search(ARRAY, TARGET)
 
     if result == -1:
-        print(f"Element: {target} is not present in the array")
+        print(f"Element: {TARGET} is not present in the array")
     else:
-        print(f"Element: {target} is present at index: {result}")
-
+        print(f"Element: {TARGET} is present at index: {result}")

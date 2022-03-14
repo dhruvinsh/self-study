@@ -19,7 +19,7 @@ max_sum = max(sums)  # 30
 
 from typing import Union
 
-from utils import time_it
+from .utils import time_it
 
 
 @time_it
@@ -40,13 +40,13 @@ def brute_force(array: list[int], k: int) -> Union[int, float]:
     """
     max_sum = float("-inf")  # assume initial sum is negative infinite
     n = len(array)
-    
-    for i in range(0, n-k+1):
-        sum = 0
-        for j in range(0, k):
-            sum += array[i + j]
 
-        max_sum = max([sum, max_sum])
+    for i in range(0, n-k+1):
+        addition = 0
+        for j in range(0, k):
+            addition += array[i + j]
+
+        max_sum = max([addition, max_sum])
 
     return max_sum
 
@@ -87,11 +87,11 @@ def sliding_window(array: list[int], k: int) -> int:
 if __name__ == "__main__":
     import random
 
-    array = random.sample(range(0, 100000), 10000)
-    k = 100
+    ARRAY = random.sample(range(0, 100000), 10000)
+    K = 100
 
-    max_sum = brute_force(array, k)
-    print(f"Max Sum with brute_force method: {max_sum}\n")
+    MAX_SUM = brute_force(ARRAY, K)
+    print(f"Max Sum with brute_force method: {MAX_SUM}\n")
 
-    max_sum = sliding_window(array, k)
-    print(f"Max Sum with sliding_window method: {max_sum}")
+    MAX_SUM = sliding_window(ARRAY, K)
+    print(f"Max Sum with sliding_window method: {MAX_SUM}")
