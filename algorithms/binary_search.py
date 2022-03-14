@@ -7,6 +7,10 @@ Algorithm: Binary Search
 Most popular search algorithm to find element in a collection eg array
 But collections need to be sorted first. Then and then Binary search
 is applicable
+
+Task: from a given long array, find the index of given element, if given
+element is not present then as a result return -1. Do not use list membership
+operator here
 """
 
 def binary_search(array: list, target: int) -> int:
