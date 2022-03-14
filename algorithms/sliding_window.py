@@ -19,7 +19,7 @@ max_sum = max(sums)  # 30
 
 from typing import Union
 
-from .utils import time_it
+from utils import time_it
 
 
 @time_it
