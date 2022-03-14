@@ -71,6 +71,10 @@ def sliding_window(array: list[int], k: int) -> int:
         maximum sum
     """
     n = len(array)
+    if n <= k:
+        print(f"invalid size of k {k}")
+        return -1
+
     window_sum = sum([array[i] for i in range(k)])  # sum of the first k elements
     max_sum = window_sum  # lets assume that window sum is max sum
 
