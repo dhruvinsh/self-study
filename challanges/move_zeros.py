@@ -2,12 +2,13 @@
 Author: Dhruvin Shah
 Email: dhruvin3@gmail.com
 
+Leetcode#283
 Task: for a given array of integers, write a funciton to move all 0's to the
 end while maintaining the relative order of the other elements
 +---+---+----+---+----+
 | 1 | 0 | 20 | 0 | -1 |
 +---+---+----+---+----+
-transform above array to 
+transform above array to
 +---+----+----+---+---+
 | 1 | 20 | -1 | 0 | 0 |
 +---+----+----+---+---+
@@ -17,7 +18,7 @@ from utils import time_it
 
 
 @time_it
-def move_zero(array:list[int]) -> list[int]:
+def move_zero(array: list[int]) -> list[int]:
     """this approach implements generic method.
     Steps:
     - initialize one pointer called j=0
@@ -58,8 +59,8 @@ if __name__ == "__main__":
 
     original = [random.randrange(0, 5) for _ in range(ARRAY_SIZE)]
     # list is mutable hence we need to make copy of it
-    array = copy.deepcopy(original)
+    ARRAY = copy.deepcopy(original)
 
-    move_zero(array)
+    move_zero(ARRAY)
     if ARRAY_SIZE < 20:
-        print(f"Old: {original}\nNew: {array}")
+        print(f"Old: {original}\nNew: {ARRAY}")
