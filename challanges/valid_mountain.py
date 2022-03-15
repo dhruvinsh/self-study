@@ -62,7 +62,7 @@ def valid_mountain(array: list[int]) -> bool:
 
     # if i still 1 then pointer did not move at all, thats bad
     # or if i is equal to length of array then its increasing array
-    if i in (1, n - 1):
+    if i in (1, n):
         return False
 
     while i < n and array[i] < array[i - 1]:
@@ -75,7 +75,7 @@ if __name__ == "__main__":
     TEST_ARRAYS = [
         [3, 5],  # invalid
         [3, 5, 5],  # invalid
-        [3, 5, 6],  # valid
+        [3, 5, 6],  # invalid
         [1, 4, 6, 8, 8, 3, 2, 0],  # invalid
         [1, 4, 6, 8, 6, 3, 2, 10],  # invalid
         [1, 4, 6, 8, 6, 3, 2, 0],  # valid
