@@ -1,4 +1,4 @@
 [tool.pylint]
 
 [tool.pylint.BASIC]
-good-names = ["_", "i", "j", "k", "m", "n", "x", "y"]
+good-names = ["_", "i", "j", "k", "m", "n", "s", "x", "y", "el"]
