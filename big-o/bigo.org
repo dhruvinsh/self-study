@@ -22,21 +22,21 @@ def foo():  # Total runtime O(a+b)
 *** Drop constants (we just need overview of runtime)
 #+BEGIN_SRC python
 def min_max(array):  # Total runtime O(2N) => drop constants hence O(N)
-min = max = None
-for i in array:  # runtime O(N)
-    min = min([i, min])
-for i in array:  # runtime O(N)
-    max = max([i, max])
-return min, max
+    min = max = None
+    for i in array:  # runtime O(N)
+        min = min([i, min])
+    for i in array:  # runtime O(N)
+        max = max([i, max])
+    return min, max
 #+END_SRC
 
 #+BEGIN_SRC python
 def min_max(array):  # Total runtime O(N)
-min = max = None
-for i in array:
-    min = min([i, min])
-    max = max([i, max])
-return min, max
+    min = max = None
+    for i in array:
+        min = min([i, min])
+        max = max([i, max])
+    return min, max
 #+END_SRC
 *** Different inputs --> different variables
 #+BEGIN_SRC python
@@ -44,12 +44,12 @@ return min, max
 # runtime is O(N^2^) but what does N suggest here?
 # here actual runtime is O(a * b)
 def intersection_size(array_a, array_b):
-c = 0
-for a in array_a:
-    for b in array_b:
-    if a == b:
-        c += 1
-return c
+    c = 0
+    for a in array_a:
+        for b in array_b:
+            if a == b:
+                c += 1
+    return c
 #+END_SRC
 *** *Drop non-dominante terms*
 #+BEGIN_SRC python
@@ -58,14 +58,14 @@ return c
 # based on above we can drop the non-dominat here
 # so total runtime becomes O(N^2^)
 def foo(array):
-max = None
-for i in array:  # runtime is O(N)
-    max = max([i, max])
-print(max)
+    m = None
+    for i in array:  # runtime is O(N)
+        m = max([i, m])
+    print(m)
 
-for a in array: # runtime is O(N^2^) Hint: same array unlike above
-    for b in array:
-    print(a,b)
+    for a in array: # runtime is O(N^{2}) Hint: same array unlike above
+        for b in array:
+            print(a,b)
 #+END_SRC
 
 
@@ -110,7 +110,7 @@ n = len(nums)
 sum = 0
 
 for i in range(0, n):
-sum+=nums[i]
+    sum+=nums[i]
 print("Sum of array: ", sum)
 #+END_SRC
 
@@ -149,7 +149,7 @@ Time complexity concern with number of operation whereas space complexity concer
 def get_arr_upto(n):
     arr = []
     for i in range(n):
-    arr.append(i)
+        arr.append(i)
     return arr
 #+END_SRC
 
