@@ -77,15 +77,15 @@ Time measurement: \\
     Correct way is to count number of operation like assignment, arithmetic operatoin"
 
 #+CAPTION: value of Big O for various name
-| *Name*      | *Big O*    |
+| *Name*        | *Big O*      |
 |-------------+------------|
 | Constant    | O(c)       |
 | Logarithmic | O(log(n))  |
 | Linear      | O(n)       |
 | Log Linear  | O(nlog(n)) |
-| Quadratic   | O(n^2)     |
-| Cubic       | O(n^3)     |
-| Exponential | O(2^n)     |
+| Quadratic   | O(n^{2})      |
+| Cubic       | O(n^{3})      |
+| Exponential | O(2^{n})      |
 -----
 eg:
 *** Good Example
@@ -134,14 +134,14 @@ Time complexity concern with number of operation whereas space complexity concer
 
 *** Space complexity of popular data structures
 #+CAPTION: various data structures complexities
-| *Name*            | *Big O* |
-|-------------------+---------|
-| Hash tables(dict) | O(N)    |
-| Stacks            | O(N)    |
-| Queues            | O(N)    |
-| Strings           | O(N)    |
-| Arrays            | O(N)    |
-| 2d Arrays         | O(N*M)  |
+| *Name*              | *Big O*  |
+|-------------------+--------|
+| Hash tables(dict) | O(N)   |
+| Stacks            | O(N)   |
+| Queues            | O(N)   |
+| Strings           | O(N)   |
+| Arrays            | O(N)   |
+| 2d Arrays         | O(N*M) |
 
 ** Find time/space complexity of algorithms
 #+BEGIN_SRC python
@@ -159,10 +159,10 @@ def get_arr_upto(n):
 
 ** Describe logarithms
 - what is log? \\
-  log,2,(16) = 4            ==>     2^4^ = 16 \\
-  log,2,(value) = exponent  ==>     2^exponent^ = value
+  log,2,(16) = 4            ==>     2^{4} = 16 \\
+  log,2,(value) = exponent  ==>     2^{ exponent}  = value
 
-  usually we ignore base of 2. so log = log,2,
+  usually we ignore base of 2. so log = log_{2}
 
 - what do they represents? \\
   The number of times you can divide a number by the log's base, before you get a value that's less than or equal to 1.
