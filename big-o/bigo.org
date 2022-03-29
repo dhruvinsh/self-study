@@ -5,7 +5,7 @@
 #+DATE: 2022-03-11
 #+LANGUAGE:  en
 #+STARTUP: showall
-#+OPTIONS: \n:t
+#+OPTIONS: \n:t ^:{} _:{}
 
 * BIG O
   What is O stands for? \\
@@ -41,7 +41,7 @@ def min_max(array):  # Total runtime O(N)
 *** Different inputs --> different variables
 #+BEGIN_SRC python
 # here two nested loop, and we might think that
-# runtime is O(N^2^) but what does N suggest here?
+# runtime is O(N^{2}) but what does N suggest here?
 # here actual runtime is O(a * b)
 def intersection_size(array_a, array_b):
     c = 0
@@ -53,10 +53,9 @@ def intersection_size(array_a, array_b):
 #+END_SRC
 *** *Drop non-dominante terms*
 #+BEGIN_SRC python
-# here total runtime we can calcuate as O(N+N^2^)
-# Which is O(N^2^) <= O(N+N^2^) <= O(N^2^ + O^2^)
+# here total runtime we can calcuate as O(N+N^{2})
 # based on above we can drop the non-dominat here
-# so total runtime becomes O(N^2^)
+# so total runtime becomes O(N^{2})
 def foo(array):
     m = None
     for i in array:  # runtime is O(N)
