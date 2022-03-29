@@ -159,8 +159,8 @@ def get_arr_upto(n):
 
 ** Describe logarithms
 - what is log? \\
-  log,2,(16) = 4            ==>     2^{4} = 16 \\
-  log,2,(value) = exponent  ==>     2^{ exponent}  = value
+  log_{2}(16) = 4            ==>     2^{4} = 16 \\
+  log_{2}(value) = exponent  ==>     2^{ exponent}  = value
 
   usually we ignore base of 2. so log = log_{2}
 
