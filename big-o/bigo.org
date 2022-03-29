@@ -100,7 +100,7 @@ Runtime (time) complexity is O(1)
 See the example bleow:
 #+CAPTION: Time Complexity O(1)
 #+NAME: BigO Complexity O(1)
-[[img:img/BigO-Describe-Example-1.jpg][Example-1]]
+[[file:../img/BigO-Describe-Example-1.jpg][Example-1]]
 
 *** Bad Example
 #+BEGIN_SRC python
@@ -118,7 +118,7 @@ Time complexity is 5N + 3 \\
 See the example below: \\
 #+CAPTION: Time Complexity O(N)
 #+NAME: BigO Complexity O(N)
-[[img:img/BigO-Describe-Example-2.jpg][Example-2]]
+[[file:../img/BigO-Describe-Example-2.jpg][Example-2]]
 
 ** Simplify
 - Just syats that ignore smaller terms: eg O(5N+3) is actually O(N)
@@ -173,4 +173,4 @@ def get_arr_upto(n):
 
 * Reference
 - [[file:big-o-cheatsheet.pdf][Big O Cheatsheet.pdf]]
-- [[img:img/big-o-cheatsheet.png][Big O Cheatsheet.png]]
+- [[file:../img/big-o-cheatsheet.png][Big O Cheatsheet.png]]
