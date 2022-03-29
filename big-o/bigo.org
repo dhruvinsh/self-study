@@ -1,24 +1,25 @@
 #+TITLE: Big O
 #+AUTHOR: Dhruvin Shah
+#+EMAIL: dhruvin3@gmail.com
+#+DESCRIPTION: This document provides summary of Big O notaion and basic rules
 #+DATE: 2022-03-11
 #+LANGUAGE:  en
 #+STARTUP: showall
 #+OPTIONS: \n:t
 
 * BIG O
-  What is O stands for?
+  What is O stands for? \\
   The letter O was chosen by Bachmann to stand for Ordnung, meaning the order of approximation
 ** Rules
 Reference: [[https://www.youtube.com/watch?v=v4cd1O4zkGw][HackerRank - Big O Notation]]
+-----
 *** Different steps gets added
-Example:
 #+BEGIN_SRC python
 def foo():  # Total runtime O(a+b)
     bar();  # O(a)
     baz();  # O(b)
 #+END_SRC
-*** *Drop constants (we just need overview of runtime)*
-Example: 1
+*** Drop constants (we just need overview of runtime)
 #+BEGIN_SRC python
 def min_max(array):  # Total runtime O(2N) => drop constants hence O(N)
 min = max = None
@@ -29,7 +30,6 @@ for i in array:  # runtime O(N)
 return min, max
 #+END_SRC
 
-Example: 2
 #+BEGIN_SRC python
 def min_max(array):  # Total runtime O(N)
 min = max = None
@@ -38,8 +38,7 @@ for i in array:
     max = max([i, max])
 return min, max
 #+END_SRC
-*** *Different inputs --> different variables*
-Example:
+*** Different inputs --> different variables
 #+BEGIN_SRC python
 # here two nested loop, and we might think that
 # runtime is O(N^2^) but what does N suggest here?
@@ -53,7 +52,6 @@ for a in array_a:
 return c
 #+END_SRC
 *** *Drop non-dominante terms*
-Example:
 #+BEGIN_SRC python
 # here total runtime we can calcuate as O(N+N^2^)
 # Which is O(N^2^) <= O(N+N^2^) <= O(N^2^ + O^2^)
@@ -75,8 +73,8 @@ for a in array: # runtime is O(N^2^) Hint: same array unlike above
 ** Describe
 Less time and space that is better.
 
-Time measurement:
-    Start-stop for code execution not perfect, what if faster computer?
+Time measurement: \\
+    Start-stop for code execution not perfect, what if faster computer? \\
     Correct way is to count number of operation like assignment, arithmetic operatoin"
 
 #+CAPTION: value of Big O for various name
@@ -89,7 +87,7 @@ Time measurement:
 | Quadratic   | O(n^2)     |
 | Cubic       | O(n^3)     |
 | Exponential | O(2^n)     |
-
+-----
 eg:
 *** Good Example
 #+BEGIN_SRC python
@@ -116,9 +114,9 @@ sum+=nums[i]
 print("Sum of array: ", sum)
 #+END_SRC
 
-Here n number of addition, n assignment
-Time complexity is 5N + 3
-See the example below:
+Here n number of addition, n assignment \\
+Time complexity is 5N + 3 \\
+See the example below: \\
 #+CAPTION: Time Complexity O(N)
 #+NAME: BigO Complexity O(N)
 [[img:img/BigO-Describe-Example-2.jpg][Example-2]]
@@ -155,19 +153,19 @@ def get_arr_upto(n):
     return arr
 #+END_SRC
 
-1. what is the space complexity?
+1. what is the space complexity? \\
    O(N) --> array increase by the append and limited to size of n
-2. what is the time complexity?
+2. what is the time complexity? \\
    O(N) --> loop over the n data
 
 ** Describe logarithms
-- what is log?
-  log,2,(16) = 4            ==>     2^4^ = 16
+- what is log? \\
+  log,2,(16) = 4            ==>     2^4^ = 16 \\
   log,2,(value) = exponent  ==>     2^exponent^ = value
 
   usually we ignore base of 2. so log = log,2,
 
-- what do they represents?
+- what do they represents? \\
   The number of times you can divide a number by the log's base, before you get a value that's less than or equal to 1.
 
 - Example of algorithms with complexities that involv logs?
