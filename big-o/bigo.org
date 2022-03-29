@@ -3,6 +3,7 @@
 #+DATE: 2022-03-11
 #+LANGUAGE:  en
 #+STARTUP: showall
+#+OPTIONS: \n:t
 
 * BIG O
   What is O stands for?
@@ -72,10 +73,11 @@ for a in array: # runtime is O(N^2^) Hint: same array unlike above
 
 * LeetCode Explaination
 ** Describe
-less time and space that is better.
+Less time and space that is better.
+
 Time measurement:
-    start-stop for code execution not perfect, what if faster computer?
-    correct way is to count number of operation like assignment, arithmetic operatoin"
+    Start-stop for code execution not perfect, what if faster computer?
+    Correct way is to count number of operation like assignment, arithmetic operatoin"
 
 #+CAPTION: value of Big O for various name
 | *Name*      | *Big O*    |
@@ -100,7 +102,6 @@ Here 1 assignment, 1 addition, 1 multiplication, 1 devision
 Runtime (time) complexity is O(1)
 See the example bleow:
 [[file:BigO-Describe-Example-1.jpg][Example-1]]
-
 
 *** Bad Example
 #+BEGIN_SRC python
@@ -170,5 +171,5 @@ def get_arr_upto(n):
   +  Merge sort ( N*log(N) )
 
 * Reference
-[[file:big-o-cheatsheet.pdf][Big O Cheatsheet.pdf]]
-[[file:big-o-cheatsheet.png][Big O Cheatsheet.png]]
+- [[file:big-o-cheatsheet.pdf][Big O Cheatsheet.pdf]]
+- [[file:big-o-cheatsheet.png][Big O Cheatsheet.png]]
