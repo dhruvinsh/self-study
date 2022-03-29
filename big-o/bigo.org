@@ -101,7 +101,9 @@ print("sum of array: ", n*(n+1)/2)
 Here 1 assignment, 1 addition, 1 multiplication, 1 devision
 Runtime (time) complexity is O(1)
 See the example bleow:
-[[file:BigO-Describe-Example-1.jpg][Example-1]]
+#+CAPTION: Time Complexity O(1)
+#+NAME: BigO Complexity O(1)
+[[img:img/BigO-Describe-Example-1.jpg][Example-1]]
 
 *** Bad Example
 #+BEGIN_SRC python
@@ -117,7 +119,9 @@ print("Sum of array: ", sum)
 Here n number of addition, n assignment
 Time complexity is 5N + 3
 See the example below:
-[[file:BigO-Describe-Example-2.jpg][Example-2]]
+#+CAPTION: Time Complexity O(N)
+#+NAME: BigO Complexity O(N)
+[[img:img/BigO-Describe-Example-2.jpg][Example-2]]
 
 ** Simplify
 - Just syats that ignore smaller terms: eg O(5N+3) is actually O(N)
@@ -172,4 +176,4 @@ def get_arr_upto(n):
 
 * Reference
 - [[file:big-o-cheatsheet.pdf][Big O Cheatsheet.pdf]]
-- [[file:big-o-cheatsheet.png][Big O Cheatsheet.png]]
+- [[img:img/big-o-cheatsheet.png][Big O Cheatsheet.png]]
