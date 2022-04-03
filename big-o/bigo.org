@@ -51,7 +51,7 @@ def intersection_size(array_a, array_b):
                 c += 1
     return c
 #+END_SRC
-*** *Drop non-dominante terms*
+*** Drop non-dominante terms
 #+BEGIN_SRC python
 # here total runtime we can calcuate as O(N+N^{2})
 # based on above we can drop the non-dominat here
@@ -77,15 +77,15 @@ Time measurement: \\
     Correct way is to count number of operation like assignment, arithmetic operatoin"
 
 #+CAPTION: value of Big O for various name
-| *Name*        | *Big O*      |
+| *Name*      | *Big O*    |
 |-------------+------------|
 | Constant    | O(c)       |
 | Logarithmic | O(log(n))  |
 | Linear      | O(n)       |
 | Log Linear  | O(nlog(n)) |
-| Quadratic   | O(n^{2})      |
-| Cubic       | O(n^{3})      |
-| Exponential | O(2^{n})      |
+| Quadratic   | O(n^{2})   |
+| Cubic       | O(n^{3})   |
+| Exponential | O(2^{n})   |
 -----
 eg:
 *** Good Example
@@ -134,14 +134,14 @@ Time complexity concern with number of operation whereas space complexity concer
 
 *** Space complexity of popular data structures
 #+CAPTION: various data structures complexities
-| *Name*              | *Big O*  |
-|-------------------+--------|
-| Hash tables(dict) | O(N)   |
-| Stacks            | O(N)   |
-| Queues            | O(N)   |
-| Strings           | O(N)   |
-| Arrays            | O(N)   |
-| 2d Arrays         | O(N*M) |
+| *Name*            | *Big O* |
+|-------------------+---------|
+| Hash tables(dict) | O(N)    |
+| Stacks            | O(N)    |
+| Queues            | O(N)    |
+| Strings           | O(N)    |
+| Arrays            | O(N)    |
+| 2d Arrays         | O(N*M)  |
 
 ** Find time/space complexity of algorithms
 #+BEGIN_SRC python
